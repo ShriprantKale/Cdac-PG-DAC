@@ -1,0 +1,184 @@
+
+#include<iostream>
+using namespace std;
+int main(){
+	int sqr,n;
+	cout<<"\n Enter no";
+	cin>>n;
+	for(int i=1;i<=n;i++){
+	sqr=i*i;
+	cout<<sqr<<endl;
+	
+}
+//cout<<sqr;
+    
+return 0;
+}
+--------------------------------------------------------------------------
+/*
+Write a program scan 1 to 10 numbers and print in words
+for example
+enter number 2
+Two
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	int n;
+	cout<<"Enter the number\n";
+	cin>>n;
+	switch(n)
+	{
+		case 1:
+			cout<<"one";
+			break;
+		case 2:
+			cout<<"two";
+			break;
+		case 3:
+			cout<<"three";
+			break;
+		case 4:
+			cout<<"four";
+			break;
+		case 5:
+			cout<<"five";
+			break;
+		case 6:
+			cout<<"six";
+			break;
+		case 7:
+			cout<<"seven";
+			break;
+		case 8:
+			cout<<"eight";
+			break;
+		case 9:
+			cout<<"nine";
+			break;
+		case 10:
+			cout<<"ten";
+			break;
+		default:
+			cout<<"not valid input";
+			
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------
+
+/*
+Write a program of menu driven
++. Addition
+-. Subtraction
+*. multplication
+/. Division
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+	
+	int a,b;
+	char choice;
+	cout<<"Enter 2 Numbers\n";
+	cin>>a>>b;
+	cout<<"\n+.Addition \n-.Subtraction\n*.multplication\n/.Division";
+	cout<<"\nEnter Choice\n";
+	cin>>choice;  
+	switch(choice)
+	{
+		case '+':
+			cout<<"\nAddition ="<<a+b;
+		break;
+		case '-':
+			cout<<"\nSubtraction ="<<a-b;
+		break;
+		case '*':
+			cout<<"\nMultplication ="<<a*b;
+		break;
+		case '/':
+			cout<<"\nDivision ="<<a/b;
+			break;
+		default:
+			cout<<"not valid input";
+			
+	}
+}
+
+-----------------------------------------------------------------------------
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int count=0;
+for(int i=2000;i<=2020;i++){
+	if(i%4==0){
+		cout<<i<<"\n"<<endl;
+		count++;	
+	}
+}
+cout<<count;
+}
+-------------------------------------------------------------------------
+
+#include<iostream>
+using namespace std;
+int main(){
+	int n,num,x,rev=0;
+	cout<<"\n Enter No";
+	cin>>n;
+	num=n;
+
+	while(num!=0){
+		x=num%10;
+		rev=(rev*10)+x;
+		num=num/10;
+	
+	}
+		if(n==rev &&n>0 ){
+			cout<<"\n Palindrome";
+		}
+		else{
+			cout<<"\n Not Palindrome";
+		}
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+write a program which scan number and print total unit places
+#include<iostream>
+using namespace std;
+int main(){
+	int n, numCount;
+	cout<<"Enter a number : ";
+	cin>>n;
+	while(n>0){
+		numCount++;
+		n=n/10;
+	}
+	cout<<"Number of unit places = "<<numCount;
+}
+
+Sum of n fibonacci Numbers
+#include<iostream>
+using namespace std;
+int main(){
+	int f0 = 0,f1 =1,n,sum =0,fn=0;
+	cout<<"Enter a Number = ";
+	cin>>n;
+	for(int i =0; i<n; i++){
+		if(i<2){
+			sum = sum+i;
+		}
+		else{
+			fn = fn+f1;
+			f0 = f1;
+			f1 = fn;
+			sum = sum+fn;
+		}
+	}
+	cout<<"Sum of fibonacci Number is "<<sum;
+}
+
+

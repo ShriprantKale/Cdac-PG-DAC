@@ -1,0 +1,221 @@
+56 Shriprant kale
+
+1. Simple Function Structure:
+Prompt: Create a C++ function that takes two integers as input, adds them, and returns the sum.
+Sample Input: 5, 10
+Sample Output: The total is: 15
+
+//#include<iostream>
+//using namespace std;
+//int add(int a,int b)
+//{
+//	return a+b;
+//}
+//int main()
+//{
+//	int num1,num2;
+//	cout<<"\nEnter two numbers:";
+//	cin>>num1>>num2;
+//	int result=add(num1,num2);
+//	cout<<"\nthe total is:"<<result;
+//	
+//		return 0;
+//}
+---------------------------------------------------------------------------------
+
+2. Square of a Number:
+Prompt: Write a C++ function that takes a number as input and returns its square.
+Sample Input: 20
+Sample Output: The square of 20 is: 400.00
+
+#include<iostream>
+using namespace std;
+double square(double num)
+{ 
+return num*num;
+}
+int main(){
+	double num;
+	cout<<"\nEnter a number:";
+	cin>>num;
+	double result=square(num);
+	cout<<"\nThe square of"<<num<<"is"<<result;
+
+}
+
+
+-------------------------------------------------------------------------------------
+3. Swapping Numbers:
+Prompt: Develop a C++ function that swaps the values of two numbers passed as arguments.
+Sample Input: 2, 4
+Sample Output: Before swapping: n1 = 2, n2 = 4 After swapping: n1 = 4, n2 = 2
+
+#include<iostream>
+using namespace std;
+void swap(int a, int b){
+	cout<<"\nBefore swapping: a = "<<a<<","<<" b = "<<b;
+	a=a+b;
+	b=a-b;
+	a=a-b;
+	cout<<"\nAfter swapping: a = "<<a<<","<<" b = "<<b;
+}
+
+main(){
+	swap(4,5);
+}
+----------------------------------------------------------------------------------------
+//4.Even or Odd:
+//Prompt: Create a C++ function to determine if a given number is even or odd.
+//Sample Input: 5
+//Sample Output: The entered number is odd.
+
+#include<iostream>
+using namespace std;
+void even_odd(int n){
+	if(n%2==0){
+		cout<<"\nThe entered number is Even.";
+	}
+	else{
+		cout<<"\nThe entered number is odd.";
+	}
+}
+
+
+main(){
+	int n;
+	cout<<"Enter the value of n ";
+	cin>>n;
+	even_odd(n);
+}
+---------------------------------------------------------------------------------------
+//5. Series Sum:
+//Prompt: Write a C++ function to calculate the sum of the series 1!/1 + 2!/2 + 3!/3 + ... + n!/n.
+//Sample Input: 5
+//Sample Output: The sum of the series is: 34
+#include<iostream>
+using namespace std;
+int sum(int n){
+	int fact=1;
+	int add=0;
+	for(int i=1;i<=n;i++){
+		fact*=i;
+		add+=fact/i;
+	}
+	return add;
+}
+
+main(){
+	int n;
+	cout<<"Enter the no : ";
+	cin>>n;
+	cout<<"\nThe sum of the series is: "<<sum(n);
+	
+}
+------------------------------------------------------------------------------
+que no 6 pending
+------------------------------------------------------------------------------
+//7. Prime Number Check:
+//Prompt: Create a C++ function to check if a given number is a prime number.
+//Sample Input: 5
+//Sample Output: The number 5 is a prime number.
+
+
+#include<iostream>
+using namespace std;
+void prime(int n){
+	int flag=1;
+	for(int i=2;i<n;i++){
+		if(n%i==0){
+			flag = 0;
+		}
+		
+	
+	}
+	
+	
+	if(flag==1){
+		cout<<"\nThe number "<<n<<" is a prime number.";
+		}
+	else{
+		cout<<"\nThe number "<<n<<" is Not a prime number.";
+}
+}
+int main()
+{
+	int n;
+	cout<<"\nEnter the no. ";
+	cin>>n;
+	prime(n);
+
+return 0;
+}
+--------------------------------------------------------------------------------------------
+//8. Largest Element in Array:
+//Prompt: Write a C++ function to find the largest element in an array.
+//Sample Input: [1, 2, 3, 4, 5]
+//Sample Output: The largest element in the array is: 5
+#include<iostream>
+using namespace std;
+
+void Largest(int a[], int size){
+	int lar_no=a[0];
+	for(int i=0;i<size;i++){
+		if(a[i]>lar_no){
+			lar_no=a[i];
+		}
+	}
+	cout<<"\nThe largest element in the array is: "<<lar_no;
+}
+main(){
+	int arr[10], size;
+	cout<<"\nEnter the size of arr : ";
+	cin>>size;
+	
+	for(int i=0;i<size;i++){
+		cout<<"\nEnter the element of "<<i<<" : ";
+		cin>>arr[i];
+	}
+	cout<<"\nThe arr is ";
+	for(int i=0;i<size;i++){
+		cout<<arr[i]<<",";
+	}
+	Largest(arr,size);
+}
+------------------------------------------------------------------------------
+que no 9/10/11 pending
+------------------------------------------------------------------------------
+//12. Maximum and Minimum Values:
+//Prompt: Develop a C++ function that takes an array of numbers as input and returns an array containing the maximum and minimum values.
+//Sample Input: [25, 11, 35, 65, 20]
+//Sample Output: Minimum value is: 11 Maximum value is: 65
+#include<iostream>
+using namespace std;
+
+void Max_Min(int a[], int size){
+	int min=a[0];
+	int max=a[0];
+	for(int i=0;i<size;i++){
+		if(a[i]>max){
+			max=a[i];
+		}
+		if(a[i]<min){
+			min=a[i];
+		}
+	}
+	cout<<"\nMinimum value is: "<<min<<" Maximum value is: "<<max;
+}
+main(){
+	int arr[10], size;
+	cout<<"\nEnter the size of arr : ";
+	cin>>size;
+	
+	for(int i=0;i<size;i++){
+		cout<<"\nEnter the element of "<<i<<" : ";
+		cin>>arr[i];
+	}
+	cout<<"\nThe arr is ";
+	for(int i=0;i<size;i++){
+		cout<<arr[i]<<",";
+	}
+	Max_Min(arr,size);
+}

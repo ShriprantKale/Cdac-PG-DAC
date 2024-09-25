@@ -1,0 +1,1023 @@
+switch statement
+	It is condition which give the permission to execute menu driven program.
+It is work with the help of 
+case
+	In one switch user give multiple case statement but at time execute only one
+case which is related to choice variable.
+break
+	It is used to terminate one case through another case
+default
+	If choice case is not available then default statement execute.
+
+syntax
+switch(choice_variable)
+{
+	case 1: 
+	process statement;
+	break;
+	case 2:
+	process statement;
+	break;
+	default:
+	default statement;
+}
+/*
+Write a program of menu driven
+1. Addition
+2. Subtraction
+3. multplication
+4. Division
+*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,b,choice;
+	cout<<"Enter 2 Numbers";
+	cin>>a>>b;
+	cout<<"\n1.Addition \n2.Subtraction\n3.multplication\n4.Division";
+	cout<<"\nEnter Choice";
+	cin>>choice;  //choice =1
+	switch(choice)
+	{
+		case 1:
+			cout<<"\nAddition ="<<a+b;
+		break;
+		case 2:
+			cout<<"\nSubtraction ="<<a-b;
+		break;
+		case 3:
+			cout<<"\nMultplication ="<<a*b;
+		break;
+		default:
+			//cout<<"\nInvalid choice";
+			exit(0); // it is terminate the program
+		
+		
+	}
+
+cout<<"\nEnd"	;
+}
+
+Write a program which create menu as
+1. Odd/Even
+2. Largest Number from 3
+
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,b,c,choice;
+	cout<<"\n1.Odd/Even \n2.Largest from 3 Number";
+	cout<<"\nEnter Choice";
+	cin>>choice;  //choice =1
+	switch(choice)
+	{
+		case 1:
+			cout<<"Enter  Number";
+			cin>>a;
+			if(a%2==0)
+			cout<<"Even";
+			else
+			cout<<"Odd";
+			break;
+		case 2:
+			cout<<"Enter 3 numbers";
+cin>>a>>b>>c; 
+if(a>b && a>c) 
+cout<<"\nA Largest";
+	else
+	if(b>a && b>c)
+	cout<<"\nB Largest";
+		else
+		cout<<"\nC Largest";
+
+		default:
+			//cout<<"\nInvalid choice";
+			exit(0); // it is terminate the program
+		
+		
+	}
+
+cout<<"\nEnd"	;
+}
+
+
+Write a program scan character and print character is vowel or not
+a e i o u
+char ch;
+toupper() :- it is used to convert lower character to upper case
+tolower() :- it is used to convert upper character to lower case
+ctype.h
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+char ch;
+	cout<<"\nEnter character";
+	cin>>ch;
+	switch(toupper(ch))
+	{
+		case 'A':
+			cout<<"Vowel";
+		break;
+		case 'E':
+			cout<<"Vowel";
+		break;
+		case 'I':
+			cout<<"Vowel";
+		break;
+		case 'O':
+			cout<<"Vowel";
+		break;
+			case 'U':
+			cout<<"Vowel";
+		break;
+		
+		default:
+		cout<<"\nNot vowel character";
+			
+		
+		
+	}
+
+
+}
+Assignments
+1. Write a program scan 1 to 10 numbers and print in words
+for example
+enter number 2
+Two
+2.
+
+Write a program of menu driven
++. Addition
+-. Subtraction
+*. multplication
+/. Division
+
+char coice;
+Loop
+		It is repetition of statement till the condition is satisfied.
+		when user know what is a start what is stop and which type of process is goes on
+that time use the concept of loop.
+	       Initialization, condition, increment/decrement is a main statement of loop
+	     Loop is execute finite way or infante way. loop never infante.
+	    Time complexity is depend on loop.
+Types of loops
+1. while
+2. do while
+3. for 
+	i)simple for loop
+	ii) nested for loop
+1. while loop
+	it is very easy and step by step execution of statement.
+	while execute 
+		initialization(1)
+
+		condition
+			  process statement
+			  inc/dec
+
+initialization;
+while(condition)
+{
+process statement;
+increment/decrement;
+}
+/*
+Write a program which print the series
+1..............n
+n..................1
+*/
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,n;   //intialization
+cout<<"Enter value for n";
+cin>>n;
+cout<<"Series1..2..............."<<n;
+while(a<=n)  //condition  1<=10
+{
+	cout<<"\nA="<<a;
+	a++;
+}
+//n----------------1
+cout<<"\n"<<n<<".................1";
+ 
+while(n>=1)
+{
+	cout<<"\nN="<<n;
+	n--;
+}
+
+
+
+
+Write a program which print 
+odd series 1..3...5......n
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,n;   //intialization
+cout<<"Enter value for n";
+cin>>n;  
+
+cout<<"\nOdd series 1.....3...."<<n;
+while(a<=n)
+{
+	cout<<"\n"<<a;
+	a=a+2;
+}
+
+cout<<"\nEven series 2..4......"<<n;
+a=2;
+while(a<=n)
+{
+	cout<<"\n"<<a;
+	a=a+2;
+}
+
+}
+
+Write a program which calculate the sum on 5 numbers.
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,n,sum=0;
+cout<<"Enter 5 Numbers";
+while(a<=5)
+{
+	cout<<"\nEnter Number=";
+	cin>>n;
+	sum=sum+n;
+	a++;
+
+}
+cout<<"\nSum ="<<sum;
+
+}
+
+Write a program which calculate the odd numbers and even numbers sum 
+and print both sum
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,n,odd=0,even=0;
+cout<<"Enter 5 Numbers";
+while(a<=5)
+{
+	cout<<"\nEnter Number=";
+	cin>>n;
+		if(n%2==0)
+		even=even+n;
+		else
+		odd=odd+n;
+	
+	a++;
+
+}
+cout<<"\nOdd Sum ="<<odd;
+cout<<"\nEven Sum ="<<even;
+
+}
+
+Write a program scan 5 numbers which is combination of positive and negative number
+and count total positive number and negative number and print 
+
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,n,p=0,ne=0;
+cout<<"Enter 5 Numbers";
+while(a<=5)
+{
+	cout<<"\nEnter Number=";
+	cin>>n;
+		if(n>0)
+		p++;
+		else
+		ne++;
+	
+	a++;
+
+}
+cout<<"\nPositve Numbers ="<<p;
+cout<<"\nNegative Numbers ="<<ne;
+
+}
+
+Write a program scan 5 numbers and print maximum number
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,n,max=0;
+cout<<"Enter 5 Numbers";
+while(a<=5)
+{
+	cout<<"\nEnter Number=";
+	cin>>n;
+		if(n>max)
+		max=n;
+		
+	a++;
+
+}
+cout<<"\nMaximum Number"<<max;
+
+
+}
+
+
+Write a program scan number and print table as following format
+Enter number 3
+ 3  * 1 =3
+3   *2  =6
+
+
+3  * 10 =20
+
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,n;
+cout<<"Enter Numbers";
+cin>>n;
+while(a<=10)
+{
+	cout<<"\n"<<n<<" * "	<<a<<" = "<<n*a;
+	a++;
+
+}
+
+
+
+}
+
+Write a program scan number and print factorial of number
+Enter number 4
+factorial  24          4*3*2*1
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int fact=1,n,a;
+cout<<"Enter Numbers";
+cin>>n;
+a=n;
+while(n>=1)
+{
+	
+	fact=fact*n;
+	n--;
+
+}
+cout<<a<<"Factorial = "<<fact;
+
+}
+
+Write a program scan x and y value and perform x^y
+Enter x =3
+Ent y=4
+3*3*3*3
+Ans
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1,x,y,ans=1;
+cout<<"Enter X=";
+cin>>x;
+cout<<"Enter Y=";
+cin>>y;
+
+while(a<=y)
+{
+	ans=ans*x;
+	a++;
+
+}
+cout<<"x^y = "<<ans;;
+
+
+
+}
+
+Write a program which print Fibonacci series.
+Enter Number 15
+0
+1
+1
+2
+3
+5
+8
+13
+
+Write a program scan number and calculate the sum of digits/
+Enter Number 234
+9
+
+n=234
+sum=0
+while(n>0)   234 >0t   23 >0t  2>0t  0>0false
+{
+sum=sum+n%10;  0=0+4 sum=4  4=4+3 sum=7  7=7+2 sum=9
+n=n/10;  n=234  n=23  n=2  n=0
+
+}
+
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int n,sum=0,a;
+cout<<"Enter N=";
+cin>>n;
+a=n;
+while(n>0)
+{
+	sum=sum+n%10;
+	n=n/10;
+}
+cout<<a<<" Sum of Digits="<<sum;
+
+
+
+}
+--------------------------------------
+Write a program scan number and print number is prime or not
+Enter 5       
+prime number
+
+n=5    flag=1
+a=2
+
+while(a<n)   2<5t  3<5t  4<5t  5<5f
+{
+	if(n%a==0) 5%2==0f  5%3==0f  5%4==0f
+	{
+
+	}
+a++;  a=3 a=4 a=5
+}
+
+if(flag==1)
+prime numbr
+
+===============
+n=9    flag=1
+a=2
+
+while(a<n)   2<9t 3<9t
+{
+	if(n%a==0)  9%2==0f  9%3==0t
+	{
+		flag=0; 
+	     break;
+	}
+a++;  a=3 
+}
+
+#include<iostream>
+using namespace std;
+main()
+{
+int n,flag=1,a=2;
+cout<<"Enter value for n";
+cin>>n;
+while(a<n)
+{
+	if(n%a==0)
+	{
+		flag=0;
+		break;
+	}
+	a++;
+}
+
+if(flag==1)
+cout<<"Prime Number";
+else
+cout<<"Not Prime Number";
+
+
+}
+
+
+
+
+Assignments(while)
+1. Write a program which print square of 1 to 5 numbers.
+2. Write a program which scan number and print total unit places.
+Enter Number 12
+unit place 2
+Enter Number 234
+unit place 3
+3. Write a program which print all leap years between 2000 to 2020
+and print count,
+4. Write a program scan number and print number is palindrome or not
+Enter Number
+212
+Palindrome (reverse the same)
+5. Write a program which calculate to sum of Fibonacci series up to n
+
+6. Write  a program which design loop with 1 to 100 
+but print only 1 to 7 numbers
+2. do...while
+		It is a type of loop. which execute with one draw back i.e first time without
+checking process part execute.
+Execution
+initialization
+do
+	process statement
+	inc/dec
+while condition
+Syntax
+initialization
+do
+{
+process statement;
+increment/decrement;
+}
+while(condition);
+
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a=1;
+do
+{
+	cout<<"\n"<<a;
+	a++;
+}
+while(a<=10);
+
+
+}
+
+
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a,b,choice,ans=1;
+do
+{
+	cout<<"Enter 2 Numbers";
+	cin>>a>>b;
+	cout<<"\n1.Addition \n2.Subtraction\n3.multplication\n4.Division";
+	cout<<"\nEnter Choice";
+	cin>>choice;  //choice =1
+	switch(choice)
+	{
+		case 1:
+			cout<<"\nAddition ="<<a+b;
+		break;
+		case 2:
+			cout<<"\nSubtraction ="<<a-b;
+		break;
+		case 3:
+			cout<<"\nMultplication ="<<a*b;
+		break;
+		default:
+		cout<<"\nInvalid choice";
+		
+	} //end of switch\
+cout<<"\nDo you want to continue press 1";
+cin>>ans;
+}//end of do
+while(ans==1);
+
+
+}
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a,b,choice,ans=1;
+while(ans==1)
+{
+	cout<<"Enter 2 Numbers";
+	cin>>a>>b;
+	cout<<"\n1.Addition \n2.Subtraction\n3.multplication\n4.Division";
+	cout<<"\nEnter Choice";
+	cin>>choice;  //choice =1
+	switch(choice)
+	{
+		case 1:
+			cout<<"\nAddition ="<<a+b;
+		break;
+		case 2:
+			cout<<"\nSubtraction ="<<a-b;
+		break;
+		case 3:
+			cout<<"\nMultplication ="<<a*b;
+		break;
+		default:
+		cout<<"\nInvalid choice";
+		
+	} //end of switch\
+cout<<"\nDo you want to continue press 1";
+cin>>ans;
+}
+
+}
+
+for loop
+	It is very fast processing type of loop.
+Types of for loop
+1. simple for loop
+2. nested for loop
+
+simple for loop
+	In this give initialization ,condition and inc/dec at time.
+syntax
+for(initialization ; condition ;inc/dec)
+{
+process statement;
+}
+1st time execution
+	1. initialization
+	2. condition
+	3. process statement
+2nd time to till the condition is satisfied
+	1. inc/dec
+	2. condition
+	3. process statement
+
+
+
+#include<iostream>
+using namespace std;
+main()
+{
+int a,n;
+cout<<"Enter value for n";
+cin>>n;
+
+cout<<"\nSeries 1..2......."<<n;
+for(a=1;a<=n;a++)
+{
+	cout<<"\n"<<a;
+}
+
+
+
+}
+
+
+Write a program scan number and print factorial of number
+Enter Number 4
+1*2*3*4
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,n,fact=1;
+	cout<<"Enter value for n";
+	cin>>n;
+//	1*2*3*4
+	for(a=1;a<=n;a++)
+	{
+		fact=fact*a;
+	}
+	cout<<"\nFactorial ="<<fact;
+//	4*3*2*1
+fact=1;
+for(a=n;a>=1;a--)
+{
+	fact=fact*a;
+}
+	cout<<"\nFactorial ="<<fact;
+
+		
+}
+
+Write a program scan 10 number and count total negative numbers
+and print sum of even numbers
+
+#include<iostream>
+using namespace std;
+main()
+{
+	int a,n,even,ne;
+	cout<<"Enter 10 numbers";
+	for(a=1;a<=10;a++)
+	{
+		cout<<"\nEnter number=";
+		cin>>n;
+		if(n<0)
+		ne++;
+		
+		if(n%2==0)
+		even=even+n;
+	}
+cout<<"\nTotal Negative numbers="<<ne;
+cout<<"\nTotal of Even numbers="<<even;
+
+
+Nested for loop
+	It a combination of outer and inner for loop.
+	Outer for loop is used for row
+	Inner for loop is used for column
+	Inner for loop is totally depend on outer for loop
+Syntax
+//outer for loop
+for(initialization; condition; increment/decrement)
+{
+	//Inner for loop
+	for(initialization; condition; increment/decrement)
+	{
+	process statement;
+	}//end of inner for loop
+}//end of outer for loop
+
+Pattern printing program possible using nested for loop
+
+Write a program which print pattern
+enter limit 4
+*
+* *
+* * *
+* * * *
+* * *
+* *
+*
+
+int i,j,n;
+n=4
+i=1  2 3
+j=1 2
+
+for(i=1;i<=n;i++)
+{
+	for(j=1;j<=i;j++)
+	{
+	cout<<"*";
+	}
+cout<<"\n";
+}
+  
+i=3
+for(i=n-1; i>=1;i--)
+{
+for(j=1;j<=i;j++)
+{
+cout<<" *";
+}
+}
+
+#include<iostream>
+using namespace std;
+main()
+{
+	int i,j,n;
+	cout<<"Enter Limit";
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			cout<<" * ";
+		}
+		cout<<"\n";
+	}
+	
+	for(i=n-1;i>=1;i--)
+	{
+		for(j=1;j<=i;j++)
+		{
+			cout<<" * ";
+		}
+		cout<<"\n";
+	}
+}
+
+
+Enter limit 4
+A
+A B
+A B C
+A B C D
+
+
+i=2
+j=1;
+n=4
+char ch=65   A
+for(i=1;i<=n;i++)
+{
+	ch=65;   ch  =A
+    for(j=1;j<=i; j++)
+	{
+	cout<<ch;
+ch++;  ch=67
+}
+cout<<"\n";
+}
+
+Aa
+Aa Bb
+Aa Bb  Cc
+Aa Bb  Cc Dd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+	

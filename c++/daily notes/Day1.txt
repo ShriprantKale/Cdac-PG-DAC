@@ -1,0 +1,368 @@
+Introduction
+
+program is a group of statement which execute one by one statement.
+One time creation and multiple time use the program for different inputs.
+
+C++ with Object oriented programming lang(OOP)
+
+1. It is object oriented programming.
+2. it is case sensitive programming lang.
+3. in this used 32 keywords.
+4. Execution way bottom to top.(OOP)
+5. class and object
+6. Data abstraction and Encapsulation
+7. Inheritance and polymorphism
+complexity
+	In Complexity two types of complexity i.e
+	1. space complexity: it is depend on variable.
+	2. Time complexity: it is depend on loops.
+
+Datatypes and variables
+
+	with the help of variable used stored any type of value in memory but user
+can't define variable alone. defined variable with the help of datatypes.
+ 	Datatype is provide the definition to variable which type of value stored
+in a particular variable.
+	Variable is associated with value. In C and C++ if user can't defined
+any value to variable so it handle garbage value.
+	Space complexity is depend on variable.
+
+Datatype                        Size
+int					4Byte
+long int                            4 Byte         
+float                                 4Byte
+double / long float		8Byte
+char 					1Byte
+
+1. int and  long int :- it issued to stored any type of positive and negative
+integer value up to 4 bytes.
+
+static variable                dynamic variable
+int a=10;				int x;
+
+long x=1000;                 long int p;
+
+**How to define variable
+
+1. int a, b, c;  (valid)
+2. int A; (valid)
+3. int a2; (valid)
+4. int rollno; (valid)
+5. int roll no;(not valid, space is not allowed )
+6 int roll_no;(valid)
+7. int  #a; (not valid)
+8. int float;(not valid)
+9. int void;(not valid)
+
+float  and double
+	It is used to stored any type of positive negative integer and decimal value
+up to 4 bytes and 8 bytes.
+static variable            dynamic variable
+float a=100.30;          float b;
+double a=4000.45;    double x;
+
+char :- it is stand for character. it gives the permission to stored single character
+or collection of character. Each character is occupied 1 byte space in memory
+
+static variable              dynamic variable
+char ans='Y';              char ans;
+
+char s[50]="DAC";    char s[10];
+
+
+
+Operator ( operator operate the value of variable)
+1. Math
+  +  addition
+  -  subtraction
+  * multiplication
+  / division
+ % mod
+	int a=10,b=2,c;
+	c=a+b;  c=12
+	c=a-b;  c=8
+	c=a*b; c=20
+	c=a/b;  c=5
+	c=a%b; c=0
+2. Unary operator
+	++  increment by 1
+	--    decrement by 1	
+	int a=100,b=5;
+	a++;   a=a+1  //a=101
+	b--; b=b-1  //b=4
+3. Assignment operator(compare - True or False)
+==  compare 
+!= not equaled to
+> greater than
+>= greater than equal to
+< less than
+<= less than equal to
+
+int a=10,b=10
+a==b  true(1)
+a!=b false
+
+int a=10;
+a>=10 
+
+4. Logical operator
+	&& and  Both condition satisfied
+	|| Or      only one condition satisfied
+
+Input statement and output statement
+cin
+	It is stand for console input. it is used to read the value for any
+type of variable  and array.
+		Syntax
+		cin>>variable name;
+		Example 1
+		int a;
+		cin>>a;
+		Example 2
+		int a;
+		float b;
+		char c,s[10];
+		cin>>a>>b>>c>>s;
+		10
+		67.45
+		A
+		CDAC
+	
+cout
+	It is stand for console output. It is used with two different purpose i.e
+1. print message on your console window
+syntax
+cout<<"Message";
+Example
+cout<<"\nWelcome"<<endl<<"Students";
+or
+cout<<"Welcome\nStudents";
+2. print the value of variable
+Syntax
+cout<<variablename;
+
+Example
+int a=34,b=6,c;
+c=a+b;
+cout<<c;   34
+cout<<"C="<<c;
+C=40
+Example
+cout<<"\nA="<<a<<"\nB="<<b <<"\nC="<<c;            
+A=34
+ B=6
+C=40
+
+cin and cout is a object(member) of istream class and ostream class
+it is execute with the help of <iostream.h>
+
+simple program
+
+#include<iostream>
+using namespace std;
+main()
+{
+char c,s[10];
+cout<<"Enter character";
+cin>>c;
+cout<<"\nCharacter="<<c;
+cout<<"\nEnter Name";
+cin>>s;
+cout<<"\nName="<<s;
+
+}
+
+
+Assignments
+(simple program)
+1. Write a program scan number of years and convert in month
+year =2
+month=24
+
+2. Write a program scan hrs and convert in min and seconds
+
+3. Write a program accept student information
+rollno, name of student, 3 subjects marks, 
+calculate total marks and 
+calculate perentage
+
+**control statement(conditional statement)
+1. 
+if...else statements
+2. 
+switch statements
+1. 
+if..else
+	it is type of condition. in this if condition is satisfied then
+it give true ans other wise it gives false ans.
+	Types of if..else
+	1. simple if
+	2. if...else
+	3. nested if..else
+	4. embedded or ladder if...else
+
+1. simple if
+	In this type if condition is satisfied then only it gives the ans.
+Syntax
+if(condition)
+true ans;
+Write a program scan number and  print number is positive
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+int a;
+cout<<"Enter value for a";
+cin>>a;
+if(a>0)  
+cout<<a<<" Positive Number";
+
+}
+
+**2. if..else
+in this type if condition is satisfied compiler give true ans otherwise
+it give false ans with the help else
+ 	if(condition)
+	true ans;
+		else
+		false ans;
+/*
+Write a program scan number and print number is
+odd or even
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+int a;
+cout<<"Enter value for a";
+cin>>a;
+if(a%2 ==0)  
+cout<<a<<" Even Number";
+else
+cout<<a<<"Odd number";
+
+}
+
+/*
+Write a program scan 2 numbers and print largest 
+number
+o
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+int a,b;
+cout<<"Enter value for a and b";
+cin>>a>>b;  
+if(a>b)  
+cout<<a<<"A Largest";
+else
+cout<<b<<"B Largest";
+
+}
+
+/*
+Write a program scan age of person and print
+person is eligible for voting yes or no
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+int a;
+cout<<"Enter Age";
+cin>>a;  
+if(a>=18)  
+cout<<"voting";
+else
+cout<<"Not eligiable";
+
+}
+3. Nested if...else
+	In this user gives number of if statement and else statement but
+at time execute only one if or else statement.
+	syntax
+	if(condition)
+	true ans;
+		else
+		if(condition)
+		true ans;
+		else
+		false ans;
+
+	/*
+Write a program scan 3 numbers and print largest number
+*/
+#include<iostream>
+using namespace std;
+main()
+{
+int a,b,c;
+cout<<"Enter 3 numbers";
+cin>>a>>b>>c; 
+if(a>b && a>c) 
+cout<<"\nA Largest";
+	else
+	if(b>a && b>c)
+	cout<<"\nB Largest";
+		else
+		cout<<"\nC Largest";
+
+
+}	
+	
+4. embedded if...else or ladder if...else
+	when user gives more than one statement related to if and else
+that time user can gives all that statement inside { }
+if(condition)
+{
+----------------
+-------------
+}
+else
+{
+-------------
+------------
+}
+
+Assignments on if..else statement
+1. write a program scan age of person and print person
+is major ,minor,or senior citizen
+2. Write a program scan number and print 
+number between 1 to 250
+number between 251 to 500
+number between 501 to 750
+other wise print message number not in 1 to 750
+3. write a program scan year and print year is leap or not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
